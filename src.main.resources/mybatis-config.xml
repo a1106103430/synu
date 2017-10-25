@@ -19,11 +19,19 @@
   <typeAliases>
     <package name="com.atguigu.crud.bean"/>
   </typeAliases>
+  
   <!-- 引入分页插件 -->
   <!-- 要求3.3版本以上的mybatis -->
-  <!--  
   <plugins>
+  <!-- 
+     pageHelper的工作原理：通过mybatis的pulgin实现了Interceptor接口，
+        从而获得要执行的sql语句实现分页技术
+   -->
+    <!--  
+        此处拼写有误
     <plugin interceptor="com.github.pagehelper.PageIntercepter"></plugin>
+    -->
+    <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
   </plugins>
-  -->
+  
 </configuration>
